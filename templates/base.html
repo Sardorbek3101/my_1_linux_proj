@@ -1,5 +1,6 @@
 {% load static %}
 
+{% url "home" as home %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +13,7 @@
 </head>
 <body>
     <header>
-        <div class="navv">
+        <div id="navv" class="navv {% if request.path == home %}navv-home{% endif %}">
             <div class="logo">
                 <a href="{% url 'home' %}">
                     <div class="header_img">
@@ -23,16 +24,16 @@
                 </div>
             <div class="links">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Bleach</a></li>
-                    <li><a href="#">Jujutsukaisen</a></li>
-                    <li><a href="#">100Girls</a></li>
-                    <li><a href="#">Chaiwman</a></li>        
+                    <li><a href="{% url 'home' %}">Главная</a></li>
+                    <li><a href="#">От авторов</a></li>
+                    <li><a href="#">Аватарки</a></li>
+                    <li><a href="#">Обои</a></li>
+                    <li><a href="#">О нас</a></li>        
                 </ul>
             </div>
             <div class="login_button">
                 {% if request.user.is_authenticated %}
-                    <p style="color: white; margin:0;" href="">{{ request.user.username }}</p>
+                    <a href="{% url 'profile' request.user.username %}" style="color: white; margin:0;" href="">{{ request.user.username }}</a>
                 {% else %}
                     <a href="{% url 'login' %}">Login</a>
                 {% endif %}
@@ -56,5 +57,25 @@
         {% endblock footer %}        
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script>
+        // JavaScript для отслеживания прокрутки
+        window.addEventListener('scroll', function() {
+          var header = document.getElementById('navv');
+          var carts_cont = document.getElementById('carts_cont');
+          if (window.scrollY > 670) {
+            header.classList.add('scrolled');
+          } else {
+            header.classList.remove('scrolled');
+          }
+
+          if (window.scrollY > 790) {
+            carts_cont.classList.add('scrolled');
+          } else {
+            carts_cont.classList.remove('scrolled');
+          }
+        });
+      </script>
+      
 </body>
 </html>

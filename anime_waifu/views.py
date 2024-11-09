@@ -1,8 +1,10 @@
+from django.http import Http404, HttpResponseNotFound
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, logout
 from django.views import View
 from django.contrib.auth.forms import AuthenticationForm
 from anime_waifu.forms import UserCreateForm
+from anime_waifu.models import CustomUSer
 
 
 # Create your views here.
@@ -39,3 +41,11 @@ class UserLoginView(View):
         else:
             return render(request, "login.html", {"form":form})
             
+
+class ProfileView(View):
+    def get(self, request, username):
+        try:
+            user = CustomUSer.objects.get(username=username)
+        except:
+            raise Http404("Страница не найдена.")
+        return render(request, "profile.html", {"user":user})

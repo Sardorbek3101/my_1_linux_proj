@@ -6,14 +6,30 @@ body{
     background-repeat: no-repeat;
     background-position: center;
 }
+header {
+    height: 800px;
+}
+main {
+    position: relative;
+    z-index: 100;
+    background-color: #afbcc6;
+}
 .navv {
     display: flex;
     justify-content: space-around;
+    background-color: #222;
     position: fixed;
     height: 70px;
     width: 100%;
     top: 0;
     z-index: 500;
+    transition: 0.7s;
+}
+.navv-home{
+    background: none;
+}
+.navv.scrolled {
+    background-color:#222 ;
 }
 .logo {
     display: contents;
@@ -70,9 +86,13 @@ body{
     font-size: 20px;
     font-style: italic;
 }    
+.home-slide {
+    width: 100%;
+    z-index: 0;
+}
 .carts_cont {
-    background-color: #7386968c;
     padding-top: 30px;
+    position: relative;
 }   
 .home_carts {
     display: flex;

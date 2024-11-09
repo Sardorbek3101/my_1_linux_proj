@@ -2,14 +2,14 @@
 {% load static %}
 {% block header %}
 
-<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+<div id="carouselExampleAutoplaying" class="carousel slide home-slide" style="position: fixed;" data-bs-ride="carousel">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
     <div class="carousel-inner">
-      <div class="carousel-item active" data-bs-interval="700000">
+      <div class="carousel-item active" data-bs-interval="7000">
         <img src="{% static 'media/99px_ru_wallpaper_358956_muichirou_tokitou__muitiro_tokito_sredi_biruzovih_babochek.jpg' %}" class="d-block w-100 custom-slide-height" alt="...">
         <div class="slide_opis">
             <h3>Anime Waifus</h3><p>— ваш портал в мир аниме-красавиц. Откройте для себя коллекцию потрясающих обоев и галерей с любимыми персонажами, созданными специально для настоящих ценителей аниме!</p>
@@ -41,7 +41,7 @@
 {% endblock header %}
 {% block main %}
 
-<div class="carts_cont">
+<div id="carts_cont" class="carts_cont">
   <div class="home_carts">
     <div class="cart">
       <img src="{% static 'media/_.jpeg' %}" alt="">
@@ -61,4 +61,16 @@
   </div>
 </div>
 
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br>
+
 {% endblock main %}
+
+{% block footer %}
+
+
+{% endblock footer %}
