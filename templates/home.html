@@ -9,20 +9,20 @@
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
     <div class="carousel-inner">
-      <div class="carousel-item active" data-bs-interval="7000">
-        <img src="{% static 'media/99px_ru_wallpaper_358956_muichirou_tokitou__muitiro_tokito_sredi_biruzovih_babochek.jpg' %}" class="d-block w-100" alt="...">
+      <div class="carousel-item active" data-bs-interval="700000">
+        <img src="{% static 'media/99px_ru_wallpaper_358956_muichirou_tokitou__muitiro_tokito_sredi_biruzovih_babochek.jpg' %}" class="d-block w-100 custom-slide-height" alt="...">
         <div class="slide_opis">
             <h3>Anime Waifus</h3><p>— ваш портал в мир аниме-красавиц. Откройте для себя коллекцию потрясающих обоев и галерей с любимыми персонажами, созданными специально для настоящих ценителей аниме!</p>
         </div>
       </div>
       <div class="carousel-item" data-bs-interval="7000">
-        <img src="{% static 'media/99px_ru_wallpaper_345376_devushka_lejit_na_jeltih_cvetah.jpg' %}" class="d-block w-100" alt="...">
+        <img src="{% static 'media/99px_ru_wallpaper_345376_devushka_lejit_na_jeltih_cvetah.jpg' %}" class="d-block w-100 custom-slide-height" alt="...">
         <div class="slide_opis">
             <h3>Коллекция лучших артов</h3><p>— погрузитесь в атмосферу аниме с галереей, полной уникальных изображений и любимых вайфу. Найдите идеальное вдохновение для своего экрана!</p>
         </div>
       </div>
       <div class="carousel-item" data-bs-interval="7000">
-        <img src="{% static 'media/99px_ru_wallpaper_338798_raiden_shogun__segun_rajden_pod_vodoj_personaj.jpg' %}" class="d-block w-100" alt="...">
+        <img src="{% static 'media/99px_ru_wallpaper_338798_raiden_shogun__segun_rajden_pod_vodoj_personaj.jpg' %}" class="d-block w-100 custom-slide-height" alt="...">
         <div class="slide_opis">
             <h3>Ваши любимые героини здесь</h3><p>— откройте для себя новые образы и наслаждайтесь качественными иллюстрациями. Найдите свою вайфу и добавьте немного магии в повседневность!</p>
         </div>
@@ -41,9 +41,24 @@
 {% endblock header %}
 {% block main %}
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br>
-
+<div class="carts_cont">
+  <div class="home_carts">
+    <div class="cart">
+      <img src="{% static 'media/_.jpeg' %}" alt="">
+    </div>
+    <div class="cart">
+      <img src="{% static 'media/_ (1).jpeg' %}" alt="">
+    </div>
+    <div class="cart">
+      <img src="{% static 'media/_ (2).jpeg' %}" alt="">
+    </div>
+    <div class="cart">
+      <img src="{% static 'media/_ (3).jpeg' %}" alt="">
+    </div>
+    <div class="cart">
+      <img src="{% static 'media/Angel.jpeg' %}" alt="">
+    </div>
+  </div>
+</div>
 
 {% endblock main %}

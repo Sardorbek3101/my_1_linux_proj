@@ -1,6 +1,6 @@
 body{
     margin: 0;
-    background-image: linear-gradient( rgb(0 0 0 / 50%), rgb(0 0 0 / 50%) ), url("../media/99px_ru_wallpaper_192574_micuha_mijamizu__mitsuha_miyamizu_sovershaet_obrjad_v.jpg");
+    /* background-image: linear-gradient( rgb(0 0 0 / 50%), rgb(0 0 0 / 50%) ), url("../media/99px_ru_wallpaper_192574_micuha_mijamizu__mitsuha_miyamizu_sovershaet_obrjad_v.jpg"); */
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
@@ -9,7 +9,6 @@ body{
 .navv {
     display: flex;
     justify-content: space-around;
-    background-color: #b0c4de5e;
     position: fixed;
     height: 70px;
     width: 100%;
@@ -50,6 +49,11 @@ body{
     color: white;
     margin: 0 10px;
 }
+.custom-slide-height {
+    height: 800px;
+    object-fit: cover;
+    object-position: top;
+}
 .slide_opis {
     position: absolute;
     top: 400px;
@@ -65,7 +69,25 @@ body{
     color: #e9eefb;
     font-size: 20px;
     font-style: italic;
-}       
+}    
+.carts_cont {
+    background-color: #7386968c;
+    padding-top: 30px;
+}   
+.home_carts {
+    display: flex;
+    justify-content: center;
+}
+.cart {
+    width: 17%;
+    margin: 0 15px 0;
+    /* border-radius: 27px; */
+}
+.cart img {
+    width: 100%;
+    border-radius: 10px;
+}
+
 .login_button {
     margin: auto 0;
 }
