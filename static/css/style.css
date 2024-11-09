@@ -1,17 +1,33 @@
 body{
     margin: 0;
+    background-image: linear-gradient( rgb(0 0 0 / 50%), rgb(0 0 0 / 50%) ), url("../media/99px_ru_wallpaper_192574_micuha_mijamizu__mitsuha_miyamizu_sovershaet_obrjad_v.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
-.nav {
+.navv {
     display: flex;
     justify-content: space-around;
-    background-color: lightsteelblue;
+    background-color: #b0c4de5e;
+    position: fixed;
     height: 70px;
+    width: 100%;
+    top: 0;
+    z-index: 500;
+}
+.logo {
+    display: contents;
 }
 .logo a {
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: seagreen;
+    color: #f5f7ff;
+}
+.logo h2 {
+    font-family: sans-serif;
+    margin: 0;
 }
 .header_img {
     width: 50px;
@@ -31,9 +47,25 @@ body{
 }
 .links ul li a {
     text-decoration: none;
-    color: #333;
+    color: white;
     margin: 0 10px;
 }
+.slide_opis {
+    position: absolute;
+    top: 400px;
+    left: 14%;
+    color: white;
+    width: 40%;
+    
+}
+.slide_opis h3 {
+    font-size: 45px;
+}
+.slide_opis p {
+    color: #e9eefb;
+    font-size: 20px;
+    font-style: italic;
+}       
 .login_button {
     margin: auto 0;
 }
@@ -48,4 +80,63 @@ body{
 .login_button a:hover {
     background-color: #6495edb0;
     transition: 0.4s;
+}
+.form_containner {
+    width: 35%;
+    margin: 7% 10% 0;
+    color: white;
+}
+
+@media (max-width: 1000px){
+    .logo h2 {
+        font-size: 24px;
+    }
+    .header_img {
+        width: 42px;
+        margin-right: 12px;
+    }
+    .links ul li a {
+        font-size: 15px;
+    }
+    .navv {
+        height: 55px;
+    }
+}
+
+@media (max-width:1400px){
+    .slide_opis {
+        top: 300px;
+    }
+    .slide_opis h3 {
+        font-size: 41px;
+    }
+    .slide_opis p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width:1050px){
+    .slide_opis {
+        top: 220px;
+    }
+    .slide_opis h3 {
+        font-size: 38px;
+    }
+    .slide_opis p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width:900px) {
+    .slide_opis h3 {
+        font-size: 30px;
+    }
+    .slide_opis p {
+        font-size: 14px;
+    }
+    .slide_opis {
+        top: 160px;
+    }
+
+
 }

@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'anime_waifu',
     #внешние
     'crispy_forms',
-    'crispy_bootstrap4',
+    'crispy_bootstrap5',
 ]
 
 MIDDLEWARE = [
@@ -134,8 +134,8 @@ STATICFILES_DIRS = [BASE_DIR / 'static']
 AUTH_USER_MODEL = "anime_waifu.CustomUser"
 
 
-CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
-CRISPY_TEMPLATE_PACK = "bootstrap4"
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 
 # Default primary key field type
